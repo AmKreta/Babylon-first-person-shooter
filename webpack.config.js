@@ -7,15 +7,20 @@ module.exports = {
     entry: path.resolve(__dirname, "src", "app.ts"),
     output: {
         filename: '[name].bundle.js',
-        path: path.resolve(__dirname, "dist")
+        path: path.resolve(__dirname, "dist"),
+        chunkFilename: '[id].[chunkhash].js',
+        sourceMapFilename: '[name].[hash:8].map',
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, "public", "index.html")
+            template: path.resolve(__dirname, "app", "index.html")
         }),
         new CopyPlugin({
             patterns: [
-              { from: "./public/*", to: "./" },
+              { from: "./public/models/**/*", to: "./models" },
+              { from: "./public/sounds/**/*", to: "./sounds" },
+              { from: "./public/textures/**/*", to: "./textures" },
+              { from: "./public", to: "./" },
             ],
           }),
     ],
