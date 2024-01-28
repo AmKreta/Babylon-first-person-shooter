@@ -180,7 +180,7 @@ function main(havokInstance: HavokPhysicsWithBindings) {
   scene.onPointerDown = (event, pickInfo, type) => {
     if (!engine.isPointerLock && event.button === 0) {
       engine.enterPointerlock();
-      
+      Engine.audioEngine?.unlock();
     }
     else {
       const ray = scene.createPickingRay(canvas.width/2, canvas.height/2, Matrix.Identity(), camera);
