@@ -1,6 +1,7 @@
-[main--polite-faun-5d43e2.netlify.app/] click here for demo
+[click here for demo](main--polite-faun-5d43e2.netlify.app/)
 
-# Abilities
-  - Walk around
-  - shoot
-  - collision detection
+# [](https://github.com/AmKreta/Babylon-first-person-shooter/tree/main#abilities)Abilities
+
+-   Walk around
+-   shoot
+-   collision detection
